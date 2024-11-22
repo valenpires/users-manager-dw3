@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useUserContext } from './UserContext';
+import { useUserContext } from './context/UserContext'
 
 const UserList = () => {
 
@@ -27,4 +27,4 @@ const UserList = () => {
   )
 }
 
-export default UserList
+export default UserList;

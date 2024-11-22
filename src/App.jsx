@@ -1,11 +1,12 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { UserProvider } from './UserContext'
+import { UserProvider } from './context/UserContext'
 import UserList from './UserList'
 import UserDetails from './UserDetails'
 import UserForm from './UserForm'
 import UserEdit from './UserEdit'
 import UserDelete from './UserDelete'
+import { Link } from 'react-router-dom'
 
 const App = () => {
   const addUser = async newUser => {
@@ -56,7 +57,7 @@ const App = () => {
             </ul>
           </nav>
           <Routes>
-            <Route path='/' element={<UserList users={users} />} />
+            <Route path='/' element={<UserList />} />
             <Route path='/users/:id' element={<UserDetails />} />
             <Route path='/create' element={<UserForm addUser={addUser} />} />
             <Route path='/edit/:id' element={<UserEdit />} />
